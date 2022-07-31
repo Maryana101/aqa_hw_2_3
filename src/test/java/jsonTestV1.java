@@ -26,12 +26,12 @@ public class jsonTestV1 {
                 // Выполняемые действия
                 .when()
                 .post("/post")
-                 // Проверки
+                // Проверки
                 .then()
-                .statusCode(403)
+                .statusCode(200)
                 .body("data.bar1", equalTo("foo1"))
-                .body("data.bar3", equalTo("foo2"))
-                .header("Content-Type","application/json; charset=utf-8")
+                .body("data.bar3", equalTo("foo3"))
+                .header("Content-Type", "application/json; charset=utf-8")
         ;
 
     }
