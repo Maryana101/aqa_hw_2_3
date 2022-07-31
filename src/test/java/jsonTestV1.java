@@ -28,9 +28,9 @@ public class jsonTestV1 {
                 .post("/post")
                  // Проверки
                 .then()
-                .statusCode(200)
+                .statusCode(403)
                 .body("data.bar1", equalTo("foo1"))
-                .body("data.bar3", equalTo("foo3"))
+                .body("data.bar3", equalTo("foo2"))
                 .header("Content-Type","application/json; charset=utf-8")
         ;
 
